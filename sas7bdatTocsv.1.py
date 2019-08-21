@@ -8,7 +8,20 @@ from sas7bdat import SAS7BDAT
 __version__="1.0"
 __status__ = "Dev"
 
+"""
+This script has three options, you can execute the script in three ways:
 
+1. python sas7bdatTocsv.1.py --version
+This is the option that show you the program's version.
+
+2. python sas7bdatTocsv.1.py -h
+This can show you some help information.
+
+3. python sas7bdatTocsv.1.py -i xxx.csv
+This option will transfer the .sas file to a .csv file.
+
+
+"""
 ###############################
 def main():
 

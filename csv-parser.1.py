@@ -7,7 +7,20 @@ import csv
 __version__="1.0"
 __status__ = "Dev"
 
+"""
+This script has three options, you can execute the script in three ways:
 
+1. python csv-parser.1.py --version
+This is the option that show you the program's version.
+
+2. python csv-parser.1.py -h
+This can show you some help information.
+
+3. python csv-parser.1.py -i xxx.csv
+This option will transfer the .csv file to dataframe and output all the rows in the file.
+
+
+"""
 ###############################
 def main():
 
@@ -26,9 +39,9 @@ def main():
 	with open(inFile, 'r') as FR:
         	dataFrame = csv.reader(FR, delimiter=',', quotechar='"')
         	rowCount = 0
-		for row in dataFrame:
+	for row in dataFrame:
 			rowCount += 1
-			print rowCount, row
+			print (rowCount, row)
 
 
 

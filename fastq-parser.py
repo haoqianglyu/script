@@ -7,8 +7,18 @@ import re
 __version__="1.0"
 __status__ = "Dev"
 
+"""
+This script has three options, you can execute the script in three ways:
 
+1. python fastq-parser.py --version
+This is the option that show you the program's version.
 
+2. python fastq-parser.py -h
+This can show you some help information.
+
+3. python fastq-parser.py -i xxx.fastq
+This option will print the read_id, read_seq and read_qual in the fastq file.
+"""
 ###############################
 def main():
 

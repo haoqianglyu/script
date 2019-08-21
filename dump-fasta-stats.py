@@ -10,6 +10,24 @@ __version__="1.0"
 __status__ = "Dev"
 
 
+
+"""
+This script has three options, you can execute the script in three ways:
+
+1. python dump-fasta-stats.py --version
+This is the option that show you the program's version.
+
+2. python dump-fasta-stats.py -h
+This can show you some help information.
+
+3. python dump-fasta-stats.py -i xxx.fasta
+This will check the .fasta file that if there are duplicate IDs in the sequence. 
+If yes, it will output "Id repeated: bad fasta file".
+If no, it will output the number of sequence.
+
+"""
+
+
 ###############################
 def main():
 
@@ -30,12 +48,12 @@ def main():
 	count = 0
 	for record in SeqIO.parse(inFile, "fasta"):
 		if record.id in seen:
-			print "Id repeated: bad fasta file"
+			print ("Id repeated: bad fasta file")
 			sys.exit()
 		count += 1
 		seen[record.id] = True
 
-	print "Number of sequence:", count
+	print ("Number of sequence:", count)
 
 
 

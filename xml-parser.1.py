@@ -8,6 +8,23 @@ __version__="1.0"
 __status__ = "Dev"
 
 
+"""
+This script has three options, you can execute the script in three ways:
+
+1. python xml-parser.1.py --version
+This is the option that show you the program's version.
+
+2. python xml-parser.1.py -h
+This can show you some help information.
+
+3. python xml-parser.1.py -i xxx.xml
+This option will open the .xml file you input, and then if the element tag is "book", 
+it will output all the attributes of elements. If the element tag is "text", 
+it will output the text of the elements.
+
+
+"""
+
 ###############################
 def main():
 
@@ -23,18 +40,18 @@ def main():
 
         xmlFile = options.xmlFile
 
-	FR = open(xmlFile)
-	xml = FR.read()
-        FR.close()
+FR = open(xmlFile)
+xml = FR.read()
+FR.close()
 
-	context =  etree.iterparse(StringIO(xml), events=("start", "end"))
+context =  etree.iterparse(StringIO(xml), events=("start", "end"))
 	 
-	for action, elem in context:
+    for action, elem in context:
 		if action == "start":
-                        if elem.tag == "book":
-                                print elem.attrib["id"]
-			elif elem.tag == "title":
-                                print elem.text
+                if elem.tag == "book":
+                    print (elem.attrib["id"])
+		        elif elem.tag == "title":
+                    print (elem.text)
 
 
 

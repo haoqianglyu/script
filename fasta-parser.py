@@ -6,7 +6,18 @@ from Bio import SeqIO
 __version__="1.0"
 __status__ = "Dev"
 
+"""
+This script has three options, you can execute the script in three ways:
 
+1. python fasta-parser.py --version
+This is the option that show you the program's version.
+
+2. python fasta-parser.py -h
+This can show you some help information.
+
+3. python fasta-parser.py -i xxx.fasta
+This option will output the sequence of a record with id equals "ENST00000357654"
+"""
 
 ###############################
 def main():

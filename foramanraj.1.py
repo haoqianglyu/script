@@ -5,7 +5,9 @@ from optparse import OptionParser
 import csv
 import glob
 
-
+"""
+This script use a .csv as input and output the fieldnames and field in the file.
+"""
 __version__="1.0"
 __status__ = "Dev"
 

@@ -9,6 +9,22 @@ __version__="1.0"
 __status__ = "Dev"
 
 
+"""
+This script has three options, you can execute the script in three ways:
+
+1. python sas7bdatTocsv.2.py --version
+This is the option that show you the program's version.
+
+2. python sas7bdatTocsv.2.py -h
+This can show you some help information.
+
+3. python sas7bdatTocsv.2.py -i xxx.csv
+This option will transfer the .sas file to a .csv file(replace all the "," with ":" in each row).
+
+
+"""
+
+
 ###############################
 def main():
 
@@ -31,7 +47,7 @@ def main():
 				row[i] = str(row[i])
 				row[i] = row[i].replace(",", ";")
 				line += ", %s" % (str(row[i]))
-			print line
+			print (line)
 
 
 if __name__ == '__main__':
